@@ -46,6 +46,8 @@ for (let i = 0; i < biciDaCorsa.length; i++) {
     }
 }
 console.log("La bici con il peso minore è: ", biciDaCorsa[biciLeggera]);
+
+
 /* 
 
 !Snack2
@@ -81,15 +83,18 @@ for (let i = 0; i < biciDaCorsa.length; i++) {
 }
 
 let squdreFalli=[]
+let squadrePunti=[]
 
 for (let p in squadreCalcio){
 
-    squdreFalli.push( squadreCalcio[p].nome, squadreCalcio[p].falliSubiti)
-    console.log((` ${squadreCalcio[p].nome} ha subuito ${squadreCalcio[p].falliSubiti} falli`))
+    squdreFalli.push(squadreCalcio[p].nome, squadreCalcio[p].falliSubiti)
+    squadrePunti.push( squadreCalcio[p].nome, squadreCalcio[p].puntiFatti)
+    // console.log((` ${squadreCalcio[p].nome} ha subuito ${squadreCalcio[p].falliSubiti} falli`))
     // console.log(` ${squadreCalcio[p].nome} ha fatto ${squadreCalcio[p].puntiFatti } punti`)
     // console.log(` ${squadreCalcio[p].nome} ha subuito ${squadreCalcio[p].falliSubiti} falli`)
 
 }
+console.log(squadrePunti)
 
 console.log(squdreFalli)
 
@@ -119,10 +124,9 @@ const reduceArray=[]
 
 function selctIndex(startArray, idxStart, idxFinish) {
     
-
-    for (idxStart = idxStart+1; idxStart < idxFinish; idxStart++) {
+    for (idxStart = idxStart + 1; idxStart < idxFinish; idxStart++) {
         console.log(idxStart)
-       reduceArray.push(startArray[idxStart])     
+        reduceArray.push(startArray[idxStart])     
           
     }
     return reduceArray
