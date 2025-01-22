@@ -127,24 +127,20 @@ const paroleFantasiose = [
 ];
 
 
-reduceArray=[]
+const reduceArray=[]
 
 function selctIndex(startArray, idxStart, idxFinish) {
     
 
-    for (idxStart + 1; idxStart < startArray.length; idxStart){
-        
-        if (idxStart > idxFinish) {
-            
-            return startArray.push(reduceArray)
-
-        }
-
+    for (idxStart = idxStart+1; idxStart < idxFinish; idxStart++) {
+        console.log(idxStart)
+       reduceArray.push(startArray[idxStart])     
+          
     }
-
+    return reduceArray
 }
 
-console.log(selctIndex(paroleFantasiose, 1,5))
+console.log(selctIndex(paroleFantasiose, 2,5))
 
 
 
