@@ -1,13 +1,11 @@
 /* 
+
 !Snack 1
 Creare un array di oggetti:
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.
 
-
 */
-
-
 
 
 const biciDaCorsa = [
@@ -25,33 +23,31 @@ const biciDaCorsa = [
 
 ];
     
+// let biciLeggera = biciDaCorsa[0];
+
+// for (let i = 0; i < biciDaCorsa.length; i++){
+
+//     if (biciDaCorsa[i].peso < biciLeggera.peso) {
+
+//         biciLeggera = biciDaCorsa[i];
+
+//     }
+
+// }
+
+// console.log("La bici con il peso minore è: ", biciLeggera);
 
 
-for (let i = 0; i < biciDaCorsa.length; i++){
-    // console.log(biciDaCorsa[i].peso);
-    if (biciDaCorsa[i].peso < 6.9) {
+let biciLeggera = 0; 
 
-        console.log(biciDaCorsa[i].peso)
-
+for (let i = 0; i < biciDaCorsa.length; i++) { 
+    if (biciDaCorsa[i].peso < biciDaCorsa[biciLeggera].peso) {
+        biciLeggera = i; 
     }
-
 }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("La bici con il peso minore è: ", biciDaCorsa[biciLeggera]);
 /* 
+
 !Snack2
 Creare un array di oggetti di squadre di calcio.
 Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
@@ -82,10 +78,9 @@ for (let i = 0; i < biciDaCorsa.length; i++) {
     squadreCalcio[i].puntiFatti=randomNum
     squadreCalcio[i].falliSubiti=falliSubiti
 
-
 }
 
-    let squdreFalli=[]
+let squdreFalli=[]
 
 for (let p in squadreCalcio){
 
@@ -95,20 +90,13 @@ for (let p in squadreCalcio){
     // console.log(` ${squadreCalcio[p].nome} ha subuito ${squadreCalcio[p].falliSubiti} falli`)
 
 }
+
 console.log(squdreFalli)
-
-
-
-
-
-
-
 
 /* 
 !Snack 3 (Bonus)
 Scrivere una funzione che accetti tre argomenti, un array ( esempio: ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'] )e due numeri (a più piccolo di b).
 La funzione ritornerà un nuovo array con li elementi estratti dall'array di partenza che hanno la posizione compresa tra i due numeri (a e b).
-
 
 */
 
