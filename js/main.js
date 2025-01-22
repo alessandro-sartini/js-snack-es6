@@ -78,24 +78,25 @@ const squadreCalcio = [
 for (let i = 0; i < biciDaCorsa.length; i++) {
       
     let randomNum = Math.floor(Math.random()*70)+1
-
+    let falliSubiti = Math.floor(Math.random()*40)+1
     squadreCalcio[i].puntiFatti=randomNum
+    squadreCalcio[i].falliSubiti=falliSubiti
 
 
 }
+
+    let squdreFalli=[]
 
 for (let p in squadreCalcio){
 
-console.log("${}")
-
+    squdreFalli.push( squadreCalcio[p].nome, squadreCalcio[p].falliSubiti)
+    console.log((` ${squadreCalcio[p].nome} ha subuito ${squadreCalcio[p].falliSubiti} falli`))
+    // console.log(` ${squadreCalcio[p].nome} ha fatto ${squadreCalcio[p].puntiFatti } punti`)
+    // console.log(` ${squadreCalcio[p].nome} ha subuito ${squadreCalcio[p].falliSubiti} falli`)
 
 }
+console.log(squdreFalli)
 
-
-console.log(squadreCalcio.puntiFatti)
-
-
-console.log(squadreCalcio)
 
 
 
@@ -110,3 +111,43 @@ La funzione ritornerà un nuovo array con li elementi estratti dall'array di par
 
 
 */
+
+
+const paroleFantasiose = [
+    "Nebbia d'oro",
+    "Luna blu",
+    "Drago verde",
+    "Vento arcano",
+    "Onda di fuoco",
+    "Rosa d'ombra",
+    "Cielo viola",
+    "Specchio magico",
+    "Fiamma eterna",
+    "Eco stellare"
+];
+
+
+reduceArray=[]
+
+function selctIndex(startArray, idxStart, idxFinish) {
+    
+
+    for (idxStart + 1; idxStart < startArray.length; idxStart){
+        
+        if (idxStart > idxFinish) {
+            
+            return startArray.push(reduceArray)
+
+        }
+
+    }
+
+}
+
+console.log(selctIndex(paroleFantasiose, 1,5))
+
+
+
+
+
+
