@@ -23,29 +23,29 @@ const biciDaCorsa = [
 
 ];
     
-// let biciLeggera = biciDaCorsa[0];
+let biciLeggera = biciDaCorsa[0];
 
-// for (let i = 0; i < biciDaCorsa.length; i++){
+for (let i = 1; i < biciDaCorsa.length; i++){
 
-//     if (biciDaCorsa[i].peso < biciLeggera.peso) {
+    if (biciDaCorsa[i].peso < biciLeggera.peso) {
 
-//         biciLeggera = biciDaCorsa[i];
+        biciLeggera = biciDaCorsa[i];
 
-//     }
-
-// }
-
-// console.log("La bici con il peso minore è: ", biciLeggera);
-
-
-let biciLeggera = 0; 
-
-for (let i = 0; i < biciDaCorsa.length; i++) { 
-    if (biciDaCorsa[i].peso < biciDaCorsa[biciLeggera].peso) {
-        biciLeggera = i; 
     }
+
 }
-console.log("La bici con il peso minore è: ", biciDaCorsa[biciLeggera]);
+
+console.log(`La bici con il peso minore è: ${biciLeggera.nome} con peso di ${biciLeggera.peso} KG `);
+
+
+// let biciLeggera = 0; 
+
+// for (let i = 1; i < biciDaCorsa.length; i++) { 
+//     if (biciDaCorsa[i].peso < biciDaCorsa[biciLeggera].peso) {
+//         biciLeggera = i; 
+//     }
+// }
+// console.log("La bici con il peso minore è: ", biciDaCorsa[biciLeggera].nome,  biciDaCorsa[biciLeggera].peso+ " "+ "kg");
 
 
 /* 
@@ -73,7 +73,7 @@ const squadreCalcio = [
     { nome: "Sampdoria", puntiFatti: 0, falliSubiti: 0 }
 ];
   
-for (let i = 0; i < biciDaCorsa.length; i++) {
+for (let i = 0; i < squadreCalcio.length; i++) {
       
     let randomNum = Math.floor(Math.random()*70)+1
     let falliSubiti = Math.floor(Math.random()*40)+1
@@ -87,16 +87,28 @@ let squadrePunti=[]
 
 for (let p in squadreCalcio){
 
-    squdreFalli.push(squadreCalcio[p].nome, squadreCalcio[p].falliSubiti)
-    squadrePunti.push( squadreCalcio[p].nome, squadreCalcio[p].puntiFatti)
+    // squdreFalli.push(squadreCalcio[p].nome, squadreCalcio[p].falliSubiti)
+    // ! VARIAZIONE PUSH PER OGGETTI PIU INTUITIVA IN STILE OGGETTO
+    squdreFalli.push(
+        {           
+            nome: squadreCalcio[p]["nome"],
+            falliSubiti: squadreCalcio[p]["falliSubiti"],
+            
+        }
+        
+    )
+    
+    squadrePunti.push(squadreCalcio[p].nome, squadreCalcio[p].puntiFatti)
     // console.log((` ${squadreCalcio[p].nome} ha subuito ${squadreCalcio[p].falliSubiti} falli`))
     // console.log(` ${squadreCalcio[p].nome} ha fatto ${squadreCalcio[p].puntiFatti } punti`)
     // console.log(` ${squadreCalcio[p].nome} ha subuito ${squadreCalcio[p].falliSubiti} falli`)
 
 }
+
 console.log(squadrePunti)
 
 console.log(squdreFalli)
+
 
 /* 
 !Snack 3 (Bonus)
@@ -125,6 +137,7 @@ const reduceArray=[]
 function selctIndex(startArray, idxStart, idxFinish) {
     
     for (idxStart = idxStart + 1; idxStart < idxFinish; idxStart++) {
+        
         console.log(idxStart)
         reduceArray.push(startArray[idxStart])     
           
